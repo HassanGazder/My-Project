@@ -1,0 +1,90 @@
+.parent-div{
+    width: 100%;
+    margin-top: 30px;
+}
+.parent-div h2{
+    margin-left: 20px;
+}
+.parent-div .accordian{
+    align-items: center;
+    width: 100%;
+    margin-left: 24px;
+}
+
+.parent-div .accordian .icon-title{
+    display: flex;
+    font-size: 16px;
+    font-weight: 400;
+    font-family:'ABeeZee', sans-serif;
+
+}
+.parent-div .accordian .icon-title .title{
+    width: 100%;
+    text-align: left;
+}
+.parent-div .accordian .icon-title .icon{
+    margin-top: 15px;
+    font-size: 10px;
+}
+.parent-div .accordian button{
+    width: 95%;
+    border: none;
+    background:none;
+}
+.parent-div .accordian button:hover{
+    background: #F5F5F5;
+}
+.parent-div .box .accordian-inputs{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+.parent-div .box .accordian-inputs select{
+    width: 210px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid rgb(231, 225, 225);
+    border-radius: 5px;
+    height: 30px;
+}
+
+.parent-div .box{
+    width: 70%;
+    background-color: white;
+    min-height: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+.parent-div .box .All-cards{
+    padding: 25px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    justify-content: center;
+    gap: 10px;
+}
+.parent-div .box .All-cards img{
+    height: 160px;
+    width: 100%;
+}
+.parent-div .box .All-cards .card{
+    width: 160px;
+    border:2px solid rgb(213, 209, 209);
+    border-radius: 5px;
+}
+.parent-div .box .All-cards .card:hover{
+    -webkit-transform: scale(1.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.parent-div .box .All-cards .product-description{
+    text-align: center;
+}
+.parent-div .box .All-cards .product-description .name{
+    font-size: 12px;
+}
+.parent-div .box .All-cards .product-description .price{
+    font-size: 12px;
+}

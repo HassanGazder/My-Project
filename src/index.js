@@ -1,13 +1,53 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom/client";
+import React from "react";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import Signup from "./Components/Signup";
+import Login from "./Components/Login";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Dashboard from "./Components/Dashboard";
+import Protected from "./Proctected/Protected";
+import Products from "./Components/Products";
+// import { BrowserRouter } from "react-router-dom";
+import App from "../src/App";
+import Vendorsignup from "./Components/Vendor/Vendorsignup";
+import Vendorlogin from "./Components/Vendor/Vendorlogin";
+import Brands from "./Components/Brands";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/signup",
+        element: <Signup />,
+      },
+      {
+        path: "/products",
+        element: <Products />,
+      },
+    ],
+  },
+  { path: "/Vendor/Signup", element: <Vendorsignup /> },
+  { path: "/Vendor/Login", element: <Vendorlogin /> },
+  {
+    path: "/Dashboard",
+    element: <Protected component={<Dashboard />} />,
+  },
+  {
+    path:'/brands',
+    element:<Brands/>
+  }
+]);
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router}></RouterProvider>
   </React.StrictMode>
 );
 

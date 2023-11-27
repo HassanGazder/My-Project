@@ -1,0 +1,55 @@
+.Vendor-login-Container {
+    min-height: 500px;
+    width: 100%;
+    background-color: white;
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px solid gray;
+  }
+  .Vendor-login-Container .form-container .image {
+      display: flex;
+      justify-content: center;
+  } 
+   .Vendor-login-Container .form-container .image img{
+    width: 200px;
+    height: auto;
+  } 
+  .Vendor-login-Container h1 {
+    font-size: 34px;
+    text-align: center;
+    font-weight: 900;  
+  }
+  .Vendor-login-Container input {
+    padding: 5px;
+    height: 20px;
+    width: 300px;
+    border: 2px solid rgb(239, 233, 233);
+    border-radius: 5px;
+    outline: none;
+  }
+  .Vendor-login-Container p {
+    color: red;
+    padding: 0;
+    margin: 0;
+    margin-left: 2px;
+    font-size: 13px;
+  }
+  .Vendor-login-Container button {
+    background-color: rgb(80, 110, 245);
+    width: 100%;
+    height: 35px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+  }
+  .Vendor-login-Container .accountnotexist {
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
