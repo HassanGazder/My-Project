@@ -13,6 +13,10 @@ import App from "../src/App";
 import Vendorsignup from "./Components/Vendor/Vendorsignup";
 import Vendorlogin from "./Components/Vendor/Vendorlogin";
 import Brands from "./Components/Brands";
+import DashboardProducts from "./Components/DashboardProducts";
+import Dasboardaccount from "./Components/Dasboardaccount";
+import Dashboarorder from "./Components/Dashboarorder";
+import Dashboardfinancial from "./Components/Dashboardfinancial";
 
 const router = createBrowserRouter([
   {
@@ -40,8 +44,20 @@ const router = createBrowserRouter([
     element: <Protected component={<Dashboard />} />,
   },
   {
-    path:'/brands',
+    path:'/Dashboard/brands',
     element:<Brands/>
+  },{
+    path:'/Dashboard/Products',
+    element:<DashboardProducts/>
+  },{
+    path:'/Dashboard/Account',
+    element:<Dasboardaccount/>
+  },{
+    path:'/Dashboard/Orders',
+    element:<Dashboarorder/>
+  },{
+    path:'/Dashboard/Financial',
+    element:<Dashboardfinancial/>
   }
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
