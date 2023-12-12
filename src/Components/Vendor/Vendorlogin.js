@@ -3,7 +3,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../../Css/Vendorcss/venderlogin.css";
 import logo from "../../images/darsi-logo.webp";
+import { useNavigate } from "react-router-dom";
 export default function Vendorlogin() {
+  let navigate = useNavigate()
   let array = JSON.parse(localStorage.getItem("Userlogin")) || [];
   let [email, setemail] = useState("");
   let [password, setpassword] = useState("");
@@ -40,7 +42,7 @@ export default function Vendorlogin() {
           ConverSignupData[index].Upassword !== password
         ) {
           console.log("done");
-          setisaccountexist("acount does not exist");
+          setisaccountexist("Email or Password Does not Match");
         } else {
           const Vendorlogin = {
             Loginemail: email,
@@ -51,10 +53,29 @@ export default function Vendorlogin() {
           let converttoString = JSON.stringify(array);
           localStorage.setItem("Vendorlogin", converttoString);
           console.log("user logged in");
-          // navigate('/Dashboard')
+          navigate('/Dashboard')
         }
       }
     }
+    let options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify({
+        "password": password,
+        "email": email,
+      }),
+    };
+    let fetchlogindata = fetch('http://localhost:5000/auth',options);
+
+    fetchlogindata.then((data)=>{
+      data.json().then((d)=>{
+        console.log(d.message);
+      })
+    })
+
+
   }
   return (
     <div className="Vendor-login-Container">

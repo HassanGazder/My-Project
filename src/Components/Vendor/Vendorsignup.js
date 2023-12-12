@@ -3,7 +3,12 @@ import { useState } from "react";
 import logo from "../../images/darsi-logo.webp";
 import { Link } from "react-router-dom";
 import "../../Css/Vendorcss/Vendorsignup.css";
+import { useNavigate } from "react-router-dom";
 export default function Vendorsignup() {
+  // let getvendor_api = 'http://localhost:5000/register';
+  // let getdata = fetch(getvendor_api, {method:"POST"})
+  // console.log(getdata);
+  let navigate = useNavigate();
   let array = JSON.parse(localStorage.getItem("VendorUsersignup")) || [];
   let [fname, setfname] = useState("");
   let [lname, setlname] = useState("");
@@ -19,7 +24,6 @@ export default function Vendorsignup() {
     event.preventDefault();
     let getdata = localStorage.getItem("Vendorsignup");
     let convertGetdata = JSON.parse(getdata);
-    // let Isemailexist;
 
     // Step 1
     // --> check if any of the field is empty or incorrect
@@ -27,31 +31,24 @@ export default function Vendorsignup() {
     // if any field is found empty or incorrect return with errors
     if (fname === "") {
       setfnmaevalidation("First name is required");
-      // return;
     }
     if (lname === "") {
       setlnmaevalidation("Last name is required");
-      // return;
     }
     if (email === "") {
       setemailvalidation("email is required");
-      // return;
     }
     if (password === "") {
       setpassawordvalidation("password is required");
-      // return;
     }
     if (cpassword === "") {
       setCpasswordvalidation("confirm password is required");
-      // return;
     }
     if (password.length < 4) {
       setpassawordvalidation("Password Is to Short");
-      // return;
     }
     if (cpassword !== password) {
       setCpasswordvalidation("Password Does Not Match");
-      // return;
     }
 
     if (
@@ -83,8 +80,6 @@ export default function Vendorsignup() {
       console.log("final");
       let converttoString = JSON.stringify(array);
       localStorage.setItem("Vendorsignup", converttoString);
-      alert("no data available");
-      //   navigate('/Dashboard')
     } else if (convertGetdata !== null) {
       for (let index = 0; index < convertGetdata.length; index++) {
         console.log("local storage email", convertGetdata[index].Uemail);
@@ -95,7 +90,7 @@ export default function Vendorsignup() {
           return;
         }
       }
-      const Vendorsignupinfo = {
+      var Vendorsignupinfo = {
         firstname: fname,
         lastname: lname,
         Uemail: email,
@@ -107,8 +102,30 @@ export default function Vendorsignup() {
       console.log("final");
       let converttoString = JSON.stringify(array);
       localStorage.setItem("Vendorsignup", converttoString);
-      //   navigate('/Dashboard')
     }
+    let options = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify({
+        "firstname": fname,
+        "lastname": lname,
+        "password": password,
+        "email": email,
+        "role": "Vendor",
+      }),
+    };
+    let fetchdata = fetch("http://localhost:5000/register", options);
+    console.log(fetchdata);
+    fetchdata.then((data) =>
+      data.json().then((d) => {
+        console.log(d.message);
+        setemailvalidation(d.message)
+        console.log("data",data);
+       navigate("/Dashboard");
+      })
+    );
   }
   return (
     <div className="VendorSignup-Container">
@@ -117,20 +134,21 @@ export default function Vendorsignup() {
           <img alt="" src={logo} />
         </div>
         <h1>Welcome to Darsi!</h1>
-        <form>
+        <form onSubmit={VendorSignup}>
           <input
             onChange={(ev) => setfname(ev.target.value)}
-            required
             type="text"
             placeholder="First Name"
+            value={fname}
           />
           <p>{fnamevalidation}</p>
           <br />
           <input
             onChange={(ev) => setlname(ev.target.value)}
-            required
             type="text"
             placeholder="Last Name"
+            name="lastname"
+            value={lname}
           />
           <p>{lnamevalidation}</p>
           <br />
@@ -138,32 +156,38 @@ export default function Vendorsignup() {
             onChange={(ev) => setemail(ev.target.value)}
             type="email"
             placeholder="Email"
+            name="email"
+            value={email}
           />
           <br />
           <p>{emailvalidation}</p>
           <br />
           <input
             onChange={(ev) => setpassword(ev.target.value)}
-            required
             type="password"
             placeholder="Password"
+            name="password"
+            value={password}
           />
           <br />
           <p>{passawordvalidation}</p>
           <br />
           <input
             onChange={(ev) => setcpassword(ev.target.value)}
-            required
             type="password"
             placeholder="Confirm Password"
+            name="confirmpassword"
+            value={cpassword}
           />
           <br />
           <p>{Cpasswordvalidation}</p>
           <br />
-          <button type="submit" onClick={VendorSignup}>
+          <button type="submit">
             Signup
           </button>
-          <p className="accountexist">If you Already Have An Account <Link to="/Vendor/Login">Login</Link></p>
+          <p className="accountexist">
+            If you Already Have An Account <Link to="/Vendor/Login">Login</Link>
+          </p>
         </form>
       </div>
     </div>

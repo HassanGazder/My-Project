@@ -17,6 +17,8 @@ import DashboardProducts from "./Components/DashboardProducts";
 import Dasboardaccount from "./Components/Dasboardaccount";
 import Dashboarorder from "./Components/Dashboarorder";
 import Dashboardfinancial from "./Components/Dashboardfinancial";
+import Category from './Components/Category';
+import Addproduct from "./Components/Addproduct";
 
 const router = createBrowserRouter([
   {
@@ -44,21 +46,33 @@ const router = createBrowserRouter([
     element: <Protected component={<Dashboard />} />,
   },
   {
-    path:'/Dashboard/brands',
-    element:<Brands/>
-  },{
-    path:'/Dashboard/Products',
-    element:<DashboardProducts/>
-  },{
-    path:'/Dashboard/Account',
-    element:<Dasboardaccount/>
-  },{
-    path:'/Dashboard/Orders',
-    element:<Dashboarorder/>
-  },{
-    path:'/Dashboard/Financial',
-    element:<Dashboardfinancial/>
-  }
+    path: "/Dashboard/brands",
+    element: <Protected componentbrands={<Brands />} />,
+  },
+  {
+    path: "/Dashboard/Products",
+    element: <Protected componentProducts={<DashboardProducts />} />,
+  },
+  {
+    path: "/Dashboard/Account",
+    element: <Protected componentAccount={<Dasboardaccount />} />,
+  },
+  {
+    path: "/Dashboard/Orders",
+    element: <Protected componentOrders={<Dashboarorder />} />,
+  },
+  {
+    path: "/Dashboard/Financial",
+    element: <Protected componentFinancial={<Dashboardfinancial />} />,
+  },
+  {
+    path: "/Dashboard/Category",
+    element: <Protected componentCategory={<Category/>} />,
+  },
+  {
+    path: "/Dashboard/Addproducts",
+    element: <Protected componentaddproducts={<Addproduct/>} />,
+  },
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

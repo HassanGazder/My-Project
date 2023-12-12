@@ -86,7 +86,7 @@ export default function Signup() {
       console.log("final");
       let converttoString = JSON.stringify(array);
       localStorage.setItem("Usersignup", converttoString);
-      alert("no data available");
+      // alert("no data available");
       navigate('/Dashboard')
 
 

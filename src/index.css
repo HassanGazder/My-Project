@@ -1,8 +1,99 @@
-@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
 body {
   background-color: white;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:'ABeeZee', sans-serif;
+  font-family: "ABeeZee", sans-serif;
+}
+
+.Header-container .header-container-right .moon-icon .sun-icon {
+  background-color: transparent;
+  border: 1px solid #fcc419;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fcc419;
+}
+.Header-container .header-container-right .sun-icon i {
+  cursor: pointer;
+  font-size: 16px;
+  color: #c69b1a;
+  background: transparent;
+}
+.darkmode-light {
+  background-color: #242529;
+}
+.darkmode-dark {
+  background-color: #1a1b1e;
+}
+.text-white {
+  color: white;
+}
+.user-icon-dark-mode {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 25px;
+  border: 2px solid white;
+  border-radius: 50%;
+  color: white;
+}
+
+.Header-container .header-container-right .user-icon {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 25px;
+  border: 2px solid #9ea0a2;
+  border-radius: 50%;
+}
+.vendor-info-darkmode {
+  line-height: 8px;
+  font-size: inherit;
+  color: white;
+}
+.vendor-info{
+  line-height: 8px;
+  font-size: inherit;
+  color: rgb(73, 80, 87);
+}
+.Header-container .header-container-right .moon-icon {
+  background-color: transparent;
+  border: 1px solid #228be6;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Header-container .header-container-right .moon-icon i {
+  cursor: pointer;
+  font-size: 16px;
+  color: #228be6;
+  background: transparent;
+}
+.moon-icon-dark-mode{
+  background-color: transparent;
+  border: 1px solid #FCC419;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dark-mode-i{
+  cursor: pointer;
+  font-size: 16px;
+  color: #FCC419;
+  background: transparent;
 }

@@ -1,10 +1,8 @@
 import React from "react";
-import logo from "../images/darsi-logo.webp";
-import "../Css/brand.css";
-import { Link } from "react-router-dom";
 import { useState } from "react";
-import "../index.css";
-export default function Brands() {
+import logo from "../images/darsi-logo.webp";
+import { Link } from "react-router-dom";
+export default function Category() {
   let [darkmode, setdarkmode] = useState(false);
   function enabledarkmode() {
     console.log("click");
@@ -108,11 +106,11 @@ export default function Brands() {
                   </Link>
                 </li>
                 <li>
-                <i className="fa-solid fa-coins"></i>
-                <Link className="item" to={'/Dashboard/Account'}>
-                <p>Category</p>
-                </Link>
-              </li>
+                  <i className="fa-solid fa-coins"></i>
+                  <Link className="item" to={"/Dashboard/Account"}>
+                    <p>Category</p>
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -127,7 +125,7 @@ export default function Brands() {
             <div className="content">
               <div className="Content-left">
                 <label className={`${darkmode === false ? "" : "text-white"}`}>
-                  Brands
+                  Category
                 </label>
                 <br />
                 <input
@@ -141,10 +139,10 @@ export default function Brands() {
               <div className="content-right">
                 <div className="Buttons">
                   <div className="button-1">
-                    <button>Add brand</button>
+                    <button>Add Category</button>
                   </div>
                   <div className="button-2">
-                    <button>Brand</button>
+                    <button>Category</button>
                   </div>
                 </div>
               </div>

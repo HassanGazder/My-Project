@@ -17,40 +17,6 @@
   gap: 20px;
   align-items: center;
 }
-.Header-container .header-container-right .moon-icon {
-  background-color: transparent;
-  border: 1px solid #228be6;
-  width: 25px;
-  height: 25px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.Header-container .header-container-right .moon-icon i {
-  cursor: pointer;
-  font-size: 16px;
-  color: #228be6;
-  background: transparent;
-}
-.Header-container .header-container-right .user-icon {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 25px;
-  width: 25px;
-  border: 2px solid #9ea0a2;
-  border-radius: 50%;
-}
-.Header-container .header-container-right .Vendor-name {
-  line-height: 8px;
-  font-size: inherit;
-  color: rgb(73, 80, 87);
-}
-.Header-container .header-container-right .Vendor-name p {
-  font-size: 12px;
-}
 .hero-parent .hero-child {
   width: 100%;
   display: flex;
@@ -81,7 +47,7 @@
   text-align: right;
   width: 500px;
 }
-.hero-child .Sidebar-right-top .content-right .button-1 button {
+.hero-child .Sidebar-right-top .content-right .Button-1 button {
   height: 38px;
   width: 130px;
   outline: none;
@@ -91,11 +57,15 @@
   color: white;
   font-weight: bold;
 }
-.hero-child .Sidebar-right-top .content-right .button-1 button:hover {
+.hero-child .Sidebar-right-top .content-right .buttons .Button-1 .item{
+  text-decoration: none;
+  color: #B3B5BD;
+}
+.hero-child .Sidebar-right-top .content-right .Button-1 button:hover {
   background-color: rgb(28, 126, 214);
   cursor: pointer;
 }
-.hero-child .Sidebar-right-top .content-right .button-2 button {
+.hero-child .Sidebar-right-top .content-right .Button-2 button {
   height: 38px;
   width: 100px;
   margin-top: 10px;
@@ -106,7 +76,7 @@
   color: white;
   font-weight: bold;
 }
-.hero-child .Sidebar-right-top .content-right .button-2 button:hover {
+.hero-child .Sidebar-right-top .content-right .Button-2 button:hover {
   background-color: rgb(28, 126, 214);
   cursor: pointer;
 }
@@ -114,7 +84,7 @@
   width: 100%;
   height: 260px;
   margin-top: 2rem;
-  border: 1px solid #f1f1f1;
+  border: 1px solid #c4c2c2;
 }
 .hero-parent .hero-child .table-box thead {
   font-size: 15px;
@@ -126,14 +96,12 @@
   display: flex;
   gap: 0;
   font-size: 15px;
-  /* overflow-x: scroll; */
 }
 .hero-parent .hero-child .table-box table .table-body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f8f9fa;
-  height: 200px;
+  height: 225px;
 }
 .hero-parent .hero-child .table-body table .table-body p {
   color: #e9ecef;

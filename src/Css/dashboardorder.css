@@ -1,0 +1,4 @@
+.hero-parent .hero-child .table-box table .table-head{
+    display: flex;
+    gap: 8rem;
+}

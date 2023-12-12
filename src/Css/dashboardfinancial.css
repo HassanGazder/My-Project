@@ -1,4 +1,36 @@
 .hero-parent .hero-child .Sidebar-right-top .WWP{
     display: flex;
     gap: 10px;
+    width: 100%;
 }
+.hero-parent .hero-child .Sidebar-right-top .financial-payment{
+    display: flex;
+    gap: 25px;
+    width: 100%;
+}
+.hero-parent .hero-child .Sidebar-right-top .financial-payment .financial button ,.Payment-request button{
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 10px 16px;
+}
+.hero-parent .hero-child .table-box table .table-head-financial{
+    display: flex;
+    justify-content: flex-start;
+    gap: 8rem;
+    font-size: 15px;
+  }
+.hero-parent .hero-child .table-box table .table-head-payment{
+    display: flex;
+    justify-content: flex-start;
+    gap:4rem;
+}
+.hero-parent .hero-child .Sidebar-right-top .content .content-right{
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+.hero-parent .hero-child .Sidebar-right-top .content .content-right .buttons button{
+    background-color: #E9ECEF;
+    color: #B3B5BD;
+}  

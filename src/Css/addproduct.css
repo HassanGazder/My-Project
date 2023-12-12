@@ -1,0 +1,92 @@
+.Add-products {
+  height: 300px;
+  padding: 10px;
+}
+.Add-products .products-inputs{
+    display: flex;
+    width: 100%;
+    gap: 27px;
+}
+.Add-products .heading-cros-button {
+  display: flex;
+  justify-content: space-between;
+}
+.Add-products .heading-cros-button .heading p {
+  color: #a4a4a4;
+}
+.Add-products .heading-cros-button .crosbutton button {
+  border: none;
+  background: none;
+  color: #a4a4a4;
+  font-size: 15px;
+}
+.Add-products .products-inputs .products-inputs-left{
+    width: 50%;
+}
+.Add-products .products-inputs .products-inputs-left input {
+  padding: 5px;
+  height: 28px;
+  width: 100%;
+  border: 2px solid rgb(239, 233, 233);
+  border-radius: 5px;
+  outline: none;
+}
+.Add-products .products-inputs .products-inputs-left .brand-product-inputs{
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+}
+.Add-products .products-inputs .products-inputs-left .brand-product-inputs input{
+    width: 356px;
+}
+.Add-products .products-inputs .products-inputs-left .vendor-selling-stock{
+    display: flex;
+    gap: 20px;
+}
+.Add-products .products-inputs-right{
+    width: 50%;
+}
+.Add-products .products-inputs-right .subject-isbn{
+    display: flex;
+    gap: 30px;
+}
+.Add-products .products-inputs-right .subject-isbn input{
+    padding: 5px;
+    height: 28px;
+    width: 330px;
+    border: 2px solid rgb(239, 233, 233);
+    border-radius: 5px;
+    outline: none;
+}
+.Add-products .products-inputs-right .age-target input{
+    padding: 5px;
+    height: 28px;
+    width: 330px;
+    border: 2px solid rgb(239, 233, 233);
+    border-radius: 5px;
+    outline: none;
+}
+.Add-products .products-inputs-right .age-target{
+    margin-top: 15px;
+    line-height: 7px;
+}
+.Add-products .products-inputs-right .age-target p{
+    font-size: 12px;
+}
+.Add-products .products-inputs-right .isavailable{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.Add-products .products-inputs-right .isavailable #vehicle1{
+    padding: 5px;
+    border: 2px solid rgb(239, 233, 233);
+    border-radius: 5px;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+.Add-products .products-inputs-right .isavailable label{
+    font-size: 12px
+}
