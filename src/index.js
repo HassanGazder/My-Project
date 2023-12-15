@@ -8,7 +8,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./Components/Dashboard";
 import Protected from "./Proctected/Protected";
 import Products from "./Components/Products";
-// import { BrowserRouter } from "react-router-dom";
 import App from "../src/App";
 import Vendorsignup from "./Components/Vendor/Vendorsignup";
 import Vendorlogin from "./Components/Vendor/Vendorlogin";
@@ -19,7 +18,6 @@ import Dashboarorder from "./Components/Dashboarorder";
 import Dashboardfinancial from "./Components/Dashboardfinancial";
 import Category from './Components/Category';
 import Addproduct from "./Components/Addproduct";
-
 const router = createBrowserRouter([
   {
     path: "/",

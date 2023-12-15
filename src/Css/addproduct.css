@@ -2,10 +2,10 @@
   height: 300px;
   padding: 10px;
 }
-.Add-products .products-inputs{
-    display: flex;
-    width: 100%;
-    gap: 27px;
+.Add-products .products-inputs {
+  display: flex;
+  width: 100%;
+  gap: 27px;
 }
 .Add-products .heading-cros-button {
   display: flex;
@@ -20,8 +20,8 @@
   color: #a4a4a4;
   font-size: 15px;
 }
-.Add-products .products-inputs .products-inputs-left{
-    width: 50%;
+.Add-products .products-inputs .products-inputs-left {
+  width: 50%;
 }
 .Add-products .products-inputs .products-inputs-left input {
   padding: 5px;
@@ -31,62 +31,166 @@
   border-radius: 5px;
   outline: none;
 }
-.Add-products .products-inputs .products-inputs-left .brand-product-inputs{
-    display: flex;
-    gap: 2rem;
-    width: 100%;
+.Add-products .products-inputs .products-inputs-left input[type]:focus {
+  outline: 1px solid #228be6;
 }
-.Add-products .products-inputs .products-inputs-left .brand-product-inputs input{
-    width: 356px;
+.Add-products .products-inputs .products-inputs-left .brand-product-inputs {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
 }
-.Add-products .products-inputs .products-inputs-left .vendor-selling-stock{
-    display: flex;
-    gap: 20px;
+.Add-products
+  .products-inputs
+  .products-inputs-left
+  .brand-product-inputs
+  .brand
+  select {
+  padding: 5px;
+  height: 40px;
+  width: 360px;
+  border: 2px solid rgb(239, 233, 233);
+  border-radius: 5px;
+  outline: none;
 }
-.Add-products .products-inputs-right{
-    width: 50%;
+.Add-products
+  .products-inputs
+  .products-inputs-left
+  .brand-product-inputs
+  input {
+  width: 356px;
 }
-.Add-products .products-inputs-right .subject-isbn{
-    display: flex;
-    gap: 30px;
+.Add-products .products-inputs .products-inputs-left .vendor-selling-stock {
+  display: flex;
+  gap: 20px;
 }
-.Add-products .products-inputs-right .subject-isbn input{
+.Add-products .products-inputs .products-inputs-left .save-and-back-buttons {
+  display: flex;
+  gap: 10px;
+}
+.Add-products
+  .products-inputs
+  .products-inputs-left
+  .save-and-back-buttons
+  .save
+  button {
+  height: 36px;
+  width: 80px;
+  background-color: #228be6;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Add-products
+  .products-inputs
+  .products-inputs-left
+  .save-and-back-buttons
+  .back
+  button {
+  height: 36px;
+  width: 80px;
+  background-color: #228be6;
+  outline: none;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Add-products .products-inputs .products-inputs-left .save-and-back-buttons {
+  margin-top: 10px;
+}
+.Add-products .products-inputs .products-inputs-left .category select{
+    width: 100%;    
     padding: 5px;
-    height: 28px;
-    width: 330px;
+    height: 40px;
     border: 2px solid rgb(239, 233, 233);
     border-radius: 5px;
     outline: none;
 }
-.Add-products .products-inputs-right .age-target input{
-    padding: 5px;
-    height: 28px;
-    width: 330px;
-    border: 2px solid rgb(239, 233, 233);
-    border-radius: 5px;
-    outline: none;
+.Add-products .products-inputs-right {
+  width: 50%;
 }
-.Add-products .products-inputs-right .age-target{
-    margin-top: 15px;
-    line-height: 7px;
+.Add-products .products-inputs-right .subject-isbn {
+  display: flex;
+  gap: 30px;
 }
-.Add-products .products-inputs-right .age-target p{
-    font-size: 12px;
+.Add-products .products-inputs-right .subject-isbn input {
+  padding: 5px;
+  height: 28px;
+  width: 330px;
+  border: 2px solid rgb(239, 233, 233);
+  border-radius: 5px;
+  outline: none;
+  cursor: not-allowed;
+  background-color: rgb(241, 243, 245);
 }
-.Add-products .products-inputs-right .isavailable{
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
+.Add-products .products-inputs-right .subject-isbn input[type]:focus {
+  outline: 1px solid #228be6;
 }
-.Add-products .products-inputs-right .isavailable #vehicle1{
-    padding: 5px;
-    border: 2px solid rgb(239, 233, 233);
-    border-radius: 5px;
-    outline: none;
-    width: 20px;
-    height: 20px;
-    margin-top: 10px;
+.Add-products .products-inputs-right .age-target input {
+  padding: 5px;
+  height: 28px;
+  width: 330px;
+  border: 2px solid rgb(239, 233, 233);
+  border-radius: 5px;
+  outline: none;
 }
-.Add-products .products-inputs-right .isavailable label{
-    font-size: 12px
+.Add-products .products-inputs-right .age-target {
+  margin-top: 15px;
+  line-height: 7px;
+}
+.Add-products .products-inputs-right .age-target p {
+  font-size: 12px;
+}
+.Add-products .products-inputs-right .isavailable {
+  display: flex;
+  align-items: center;
+}
+.Add-products .products-inputs-right .isavailable #vehicle1 {
+  padding: 5px;
+  border: 2px solid rgb(239, 233, 233);
+  border-radius: 5px;
+  outline: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 10px;
+}
+.Add-products .products-inputs-right .isavailable #vehicle1 input[type]:focus {
+  outline: 1px solid #228be6;
+}
+.Add-products .products-inputs-right .isavailable label {
+  font-size: 12px;
+}
+.Add-products .products-inputs-right .color-accoridan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+.Add-products .products-inputs-right .color-accoridan:hover {
+  background: #f5f5f5;
+}
+.Add-products .products-inputs-right .color-inputs input {
+  padding: 5px;
+  height: 25px;
+  width: 710px;
+  border: 1px solid rgb(239, 233, 233);
+  border-radius: 5px;
+  outline: none;
+}
+.Add-products .products-inputs-right .color-inputs input[type]:focus {
+  outline: 1px solid #228be6;
+}
+.Add-products .products-inputs-right .description textarea {
+  padding: 5px;
+  height: 85px;
+  width: 710px;
+  border: 1px solid rgb(239, 233, 233);
+  border-radius: 5px;
+  outline: none;
 }

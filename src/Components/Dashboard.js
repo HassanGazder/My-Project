@@ -86,7 +86,7 @@ function Dashboard() {
               </li>
               <li>
                 <i className="fa-solid fa-coins"></i>
-                <Link className="item" to={'/Dashboard/Account'}>
+                <Link className="item" to={'/Dashboard/Category'}>
                 <p>Category</p>
                 </Link>
               </li>

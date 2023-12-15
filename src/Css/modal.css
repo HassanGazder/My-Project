@@ -1,0 +1,69 @@
+.Modal-Box {
+    width: 620px;
+    height: 350px;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    z-index: 1;
+    background-color: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 3px, rgba(0, 0, 0, 0.05) 0px 28px 23px -7px, rgba(0, 0, 0, 0.04) 0px 12px 12px;
+  }
+  .Modal-Box .heading-cross-button{
+    display: flex;
+    justify-content: space-between;
+  }
+  .Modal-Box .heading-cross-button .cros-button button{
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+  }
+  .Modal-Box .inputs-div #brand{
+    padding: 5px;
+    height: 25px;
+    width: 95%;
+    border: 2px solid rgb(239, 233, 233);
+    border-radius: 5px;
+    outline: none;
+  }
+  .Modal-Box .inputs-div #image{
+    padding: 5px;
+    height: 95px;
+    width: 95%;
+    border-radius: 5px;
+    outline: none;
+  }
+  .Modal-Box .inputs-div .Feature-active-input{
+    display: flex;
+    gap: 15rem;
+    align-items: center;
+  }
+  .Modal-Box .inputs-div label{
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+  }
+  .Modal-Box .inputs-div .Feature-active-input #isfeathure, #isactive{
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(206, 212, 218);
+    /* appearance: none; */
+    border-radius: 5px;
+  }
+  .Modal-Box .inputs-div .Feature-active-input .isFeature , .isactive{
+    display: flex;
+    align-items: center;
+  }
+  .Modal-Box .submit-button button{
+    width: 100%;
+    background-color: #228be6;
+    outline: none;
+    border: none;
+    line-height: 1;
+    height: 35px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+    font-weight: 600;
+  }
