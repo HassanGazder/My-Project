@@ -18,6 +18,7 @@ import Dashboarorder from "./Components/Dashboarorder";
 import Dashboardfinancial from "./Components/Dashboardfinancial";
 import Category from './Components/Category';
 import Addproduct from "./Components/Addproduct";
+
 const router = createBrowserRouter([
   {
     path: "/",
