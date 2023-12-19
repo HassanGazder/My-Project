@@ -52,7 +52,7 @@ function Addproduct() {
             <p>Add Product Details</p>
           </div>
           <div className="crosbutton">
-            <button> <Link to={'/Dashboard/Products'}>x</Link></button>
+            <button> <Link to={'/Dashboard/Products'}><i class="fa-solid fa-xmark" style={{color:"#c4c8cf"}}></i></Link></button>
           </div>
         </div>
         <form>

@@ -2,8 +2,21 @@ import React from "react";
 import { useState } from "react";
 import logo from "../images/darsi-logo.webp";
 import { Link } from "react-router-dom";
+import Modalbox from "./Modalbox";
 export default function Category() {
   let [darkmode, setdarkmode] = useState(false);
+  let [openmodal, setopenmodal] = useState(false);
+  function handlemodal() {
+    if (openmodal === false) {
+      setopenmodal(true);
+      console.log('true');
+    }
+    if (openmodal === true) {
+      setopenmodal(false);
+      console.log('false');
+    }
+  }
+
   function enabledarkmode() {
     console.log("click");
     if (darkmode === false) {
@@ -16,7 +29,10 @@ export default function Category() {
   }
   return (
     <>
-    
+    <body style={openmodal === true ? {position:"fixed",top:"0",left:"0",zIndex:'1040',width:"100%",height:"100vh",backgroundColor:"#404040",backdropFilter:"blur(15px)"}:{}}
+      >
+
+    {openmodal === true ? <Modalbox placeholder={"Category Name"} label={"Category Name"} title={"Add Category Detail"} closemodal={setopenmodal}/> : ""}
       <div
         className={`${
           darkmode === false
@@ -35,7 +51,7 @@ export default function Category() {
             }`}
           >
             <i
-              class={`${
+              className={`${
                 darkmode === false
                   ? "fa-regular fa-moon"
                   : "fa-regular fa-sun sun-icon dark-mode-i"
@@ -140,7 +156,7 @@ export default function Category() {
               <div className="content-right">
                 <div className="Buttons">
                   <div className="button-1">
-                    <button>Add Category</button>
+                    <button onClick={handlemodal}>Add Category</button>
                   </div>
                   <div className="button-2">
                     <button>Category</button>
@@ -185,6 +201,8 @@ export default function Category() {
         </div>
         <div></div>
       </div>
+    </body>
+
     </>
   );
 }

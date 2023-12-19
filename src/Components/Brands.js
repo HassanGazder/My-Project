@@ -30,9 +30,9 @@ export default function Brands() {
   }
   return (
     <>
-      <body
+      <body style={openmodal === true ? {position:"fixed",top:"0",left:"0",zIndex:'1040',width:"100%",height:"100vh",backgroundColor:"#404040",backdropFilter:"blur(15px)"}:{}}
       >
-        {openmodal === true ? <Modalbox closemodal={setopenmodal}/> : ""}
+        {openmodal === true ? <Modalbox placeholder={"Brand Name"} label={"Brand Name"} title={"Add brand Detail"} closemodal={setopenmodal}/> : ""}
         <div
           className={`${
             darkmode === false

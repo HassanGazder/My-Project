@@ -3,8 +3,11 @@ import logo from "../images/darsi-logo.webp";
 import '../Css/dasboardaccount.css'
 import { Link } from 'react-router-dom';
 import '../index.css'
+import Accountmodal from './Accountmodal';
 export default function Dasboardaccount() {
   let [darkmode, setdarkmode] = useState(false);
+  let [openmodal, setopenmodal] = useState(false);
+
   function enabledarkmode() {
     console.log('click');
     if (darkmode === false) {
@@ -15,8 +18,20 @@ export default function Dasboardaccount() {
     }
     console.log(darkmode);
   }
+  // Modal function 
+  function handlemodal() {
+    if (openmodal === false) {
+      setopenmodal(true);
+      console.log('true');
+    }
+    if (openmodal === true) {
+      setopenmodal(false);
+      console.log('false');
+    }
+  }
     return (
         <>
+        {openmodal === true ? <Accountmodal modal={setopenmodal}/> : ""}
          <div className={`${darkmode === false ? "Header-container" : "Header-container darkmode-light"}`}>
         <div className="header-container-left">
           <img alt="" src={logo} />
@@ -101,10 +116,10 @@ export default function Dasboardaccount() {
                   <div className="content-right">
                     <div className="buttons">
                       <div className="button-1">
-                        <button>Add brand</button>
+                        <button onClick={handlemodal}>Add Account</button>
                       </div>
                       <div className="button-2">
-                        <button>Brand</button>
+                        <button>Filters</button>
                       </div>
                     </div>
                   </div>

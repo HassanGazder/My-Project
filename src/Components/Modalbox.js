@@ -11,17 +11,17 @@ export default function Modalbox(props) {
       <div className="Modal-Box">
         <div className="heading-cross-button">
           <div className="heading">
-            <p>Add Brand Details</p>
+            <p>{props.title}</p>
           </div>
           <div className="cros-button">
-            <button onClick={closemodal}>X</button> 
+            <button onClick={closemodal}><i class="fa-solid fa-xmark" style={{color:"#c4c8cf"}}></i></button> 
           </div>
         </div>
 
         <div className="inputs-div">
-          <label>Brand Name</label>
+          <label>{props.label}</label>
           <br />
-          <input id="brand" type="text" placeholder="Brand name" />
+          <input id="brand" type="text" placeholder={props.placeholder} />
           <br />
           <br />
           <label>Image</label>
